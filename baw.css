@@ -1,10 +1,28 @@
 .baw_widgetarchives_widget_class .baw-year {
     font-size: 20px;
     font-weight: bold;
+    padding: 5px 0;
+}
+
+.baw_widgetarchives_widget_class .baw-year .baw-trigger {
+    cursor: pointer;
+    float: right;
+    position: relative;
+    top: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.baw_widgetarchives_widget_class .baw-year .baw-trigger.is-open {
+    transform: rotate(180deg);
+}
+
+.baw_widgetarchives_widget_class .baw-year .baw-trigger > svg {
+    height: 12px;
+    width: 12px;
 }
 
 .baw_widgetarchives_widget_class .baw-year ul.baw-months {
-    margin-left: 20px;
+    margin: 5px 20px;
 }
 
 .baw_widgetarchives_widget_class .baw-year ul.baw-months li.baw-month {
