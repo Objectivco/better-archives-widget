@@ -8,4 +8,6 @@ function baw_load_scripts() {
 	wp_register_script( 'baw-script',plugins_url( '/baw-script.min.js', __FILE__ ), array( 'jquery' ), BAW_VERSION, true );
 	wp_enqueue_script( 'baw-script' );
 
+	wp_enqueue_style( 'baw-css', plugins_url( '/baw.css', __FILE__ ), BAW_VERSION );
+
 }

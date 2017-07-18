@@ -1,0 +1,13 @@
+.baw_widgetarchives_widget_class .baw-year {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.baw_widgetarchives_widget_class .baw-year ul.baw-months {
+    margin-left: 20px;
+}
+
+.baw_widgetarchives_widget_class .baw-year ul.baw-months li.baw-month {
+    font-weight: normal;
+    font-size: 16px;
+}
