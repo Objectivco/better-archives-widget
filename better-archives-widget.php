@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Better archives widget
+Plugin Name: Objectiv Better Archives Widget
 Plugin URI: https://wordpress.org/plugins/better-archives-widget/
 Description: Archives widget that groups by year and month
 Version: 2.2
