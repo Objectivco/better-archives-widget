@@ -56,7 +56,7 @@ class Baw_Widgetarchives_Widget_My_Archives extends WP_Widget {
 		/**
 		 * Filter the SQL WHERE clause for retrieving archives.
 		 */
-		$where = apply_filters( 'getarchives_where', "WHERE post_type = 'report' AND post_status = 'publish' AND post_date <= now()" );
+		$where = apply_filters( 'getarchives_where', "WHERE post_type = 'post' AND post_status = 'publish' AND post_date <= now()" );
 
 		/**
 		 * Filter the SQL JOIN clause for retrieving archives.
