@@ -1,6 +1,17 @@
-.baw_widgetarchives_widget_class .baw-year {
+.baw_widgetarchives_widget_class {
+    list-style-type: none;
+}
+
+.baw_widgetarchives_widget_class ul.baw-years {
+    list-style-type: none;
+    margin-left: 0;
+    padding: 0;
+}
+
+.baw_widgetarchives_widget_class ul.baw-years li.baw-year {
     font-size: 20px;
     font-weight: bold;
+    list-style-type: none;
     padding: 5px 0;
 }
 
@@ -21,11 +32,43 @@
     width: 12px;
 }
 
-.baw_widgetarchives_widget_class .baw-year ul.baw-months {
-    margin: 5px 20px;
+.baw_widgetarchives_widget_class ul.baw-years li.baw-year ul.baw-months {
+    margin: 0;
+    padding: 0;
 }
 
 .baw_widgetarchives_widget_class .baw-year ul.baw-months li.baw-month {
+    list-style-type: none;
     font-weight: normal;
     font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.baw_widgetarchives_widget_class .baw-year ul.baw-months li.baw-month > a {
+    font-weight: bold;
+}
+
+.baw_widgetarchives_widget_class .baw-year ul.baw-months li.baw-month ul.baw-posts {
+    margin-left: 0;
+    padding: 0;
+}
+
+.baw_widgetarchives_widget_class .baw-year ul.baw-months li.baw-month ul.baw-posts li.baw-post {
+    font-size: 14px;
+    list-style-type: none;
+    position: relative;
+}
+
+.baw_widgetarchives_widget_class .baw-year ul.baw-months li.baw-month ul.baw-posts li.baw-post
+    > a {
+    display: block;
+    max-width: 70%;
+}
+
+.baw_widgetarchives_widget_class .baw-year ul.baw-months li.baw-month ul.baw-posts li.baw-post
+    > span {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }

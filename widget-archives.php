@@ -64,12 +64,26 @@ class Baw_Widgetarchives_Widget_My_Archives extends WP_Widget {
 		$join = apply_filters( 'getarchives_join', '' );
 
 		if ( $months = $wpdb->get_results( "SELECT YEAR(post_date) AS year, MONTH(post_date) AS numMonth, DATE_FORMAT(post_date, '%M') AS month, count(ID) as post_count FROM $wpdb->posts $join $where GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date DESC" ) ) {
-			echo '<ul>';
+			echo '<ul class="baw-years">';
 			foreach ( $months as $month ) {
 				$currentYear = $month->year;
 				if ( ( $currentYear !== $prevYear ) && ( '' !== $prevYear ) ) {
 					echo '</ul></li>';
 				}
+
+
+				$args = array(
+				    'post_type' => 'post',
+				    'date_query' => array(
+				        array(
+				            'year'  => $month->year,
+				            'month' => $month->numMonth
+				        ),
+				    ),
+				);
+
+				$queriedPosts = get_posts( $args );
+
 				if ( $currentYear !== $prevYear ) {
 					?>
 					<li class="baw-year">
@@ -88,6 +102,14 @@ class Baw_Widgetarchives_Widget_My_Archives extends WP_Widget {
 				} ?>
 				<li class="baw-month">
 					<a href="<?php echo esc_url( get_month_link( $month->year, $month->numMonth ) ); ?>"><?php echo esc_html( $month->month ); ?></a>
+					<ul class="baw-posts">
+						<?php foreach ( $queriedPosts as $queriedPost ): ?>
+							<li class="baw-post">
+								<a href="<?php echo get_the_permalink( $queriedPost->ID ); ?>"><?php echo $queriedPost->post_title; ?></a>
+								<span class="baw-post-date"><?php echo get_the_date( 'F j, Y', $queriedPost->ID ); ?></span>
+							</li>
+						<?php endforeach; ?>
+					</ul>
 				</li>
 				<?php
 				$prevYear = $month->year;
