@@ -3,7 +3,7 @@
 Plugin Name: Objectiv Better Archives Widget
 Plugin URI: https://wordpress.org/plugins/better-archives-widget/
 Description: Archives widget that groups by year and month
-Version: 2.2
+Version: 2.3
 Author: Paul de Wouters
 Author URI: https://profiles.wordpress.org/pauldewouters
 License: GPLv2
@@ -30,7 +30,7 @@ Domain Path: /languages
 
 /* Set constant path to the Better Archives Widget plugin directory. */
 define( 'BAW_DIR', plugin_dir_path( __FILE__ ) );
-define( 'BAW_VERSION', '2.2' );
+define( 'BAW_VERSION', '2.3' );
 
 /* Set constant path to the Better Archives Widget plugin URL. */
 define( 'BAW_URL', plugin_dir_url( __FILE__ ) );
